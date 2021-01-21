@@ -1,0 +1,32 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.inp
+{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+.container
+{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
