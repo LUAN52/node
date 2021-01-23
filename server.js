@@ -1,20 +1,31 @@
 const express = require('express');
-const path = require('path');
-
+const articleRouter = require('./routes/article');
 const app = express();
+const mongoose = require('mongoose');
 
 
 app.set('view-engine','ejs');
-app.use(express.static('public'));
-app.use(express.static('css'));
+
+app.use('/articles',articleRouter);
 
 
-app.set("views",path.join(__dirname,'/views'));
-
-
-app.get('/login',function(req,resp)
-{
-    resp.render('login.ejs')
+mongoose.connect("mongodb+srv://luan:<tombraider4>@cluster0.qu7qi.mongodb.net/<blog>?retryWrites=true&w=majority",{
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
 })
 
-app.listen(3000)
+
+app.get('/',function(req,resp)
+{
+    const articles = [
+        {
+            title:"titulo",
+            createdAt: new Date(),
+            discription:'teste discription'
+
+        }]
+    resp.render('articles/index.ejs',{text:articles});
+})
+
+
+app.listen(2000);
