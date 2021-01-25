@@ -8,11 +8,11 @@
 </head>
 <body>
         <div class="container">
-           <h1 class="mb-4">novo artigo</h1>
+           <h1 class="mb-4">Atualizar artigo</h1>
 
-           <form action="/articles" method="post">
+           <form action="/articles/edit/<%=article.id%>" method="POST">
                 <%- include('_form_fields')%>
-                <button type="submit" class="btn btn-primary ">Criar artigo</button>
+                <button type="submit" class="btn btn-primary ">atualizar artigo</button>
             </form>
     </div>
 </body>

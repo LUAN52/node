@@ -8,12 +8,16 @@
 </head>
 <body>
         <div class="container">
-           <h1 class="mb-4">novo artigo</h1>
+           <h1 class="mb-4" > <%=article.title%> </h1>
+            <div class="text-muted mb-4 "></div>
+          
 
-           <form action="/articles" method="post">
-                <%- include('_form_fields')%>
-                <button type="submit" class="btn btn-primary ">Criar artigo</button>
-            </form>
+           <a class="btn btn-secondary" href="/">Todos Artigos</a>
+          <a class="btn btn-info"href="/articles/edit/<%=article.id%>">Editar</a>
+
+          <div>
+            <%-article.sanitizeHtml%>
+          </div>
     </div>
 </body>
 </html>

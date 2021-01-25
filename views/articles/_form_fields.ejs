@@ -1,18 +1,17 @@
 <div class="form-group">
     <label for="title">titulo</label>
-    <input class="form-control"type="text" name="title" id="title">
+    <input required class="form-control" value = "<%=article.title%>"type="text" name="title" id="title">
    
 </div>
 
 <div class="form-group mb-3 mt-3">
     <label for="desc">descricao</label>
-    <textarea name="desc" id="desc" cols="30" rows="10" class="form-control"></textarea>
+    <textarea name="desc" id="desc"  cols="30" rows="10" class="form-control" ><%=article.description%></textarea>
 </div>
 
 
 <div class="form-group mb-3">
     <label for="mark">remarcaçao</label>
-    <textarea name="mark" id="mark" cols="30" rows="10" class="form-control"></textarea>
+    <textarea required name="mark" value = "<%=article.id%>" id="mark" cols="30" rows="10" class="form-control" ><%=article.markdown%></textarea>
 </div>
-<a class="btn btn-secondary" href="http://">cancelar</a>
-<button type="submit" class="btn btn-primary ">Criar artigo</button>
+<a class="btn btn-secondary" href="/">cancelar</a>

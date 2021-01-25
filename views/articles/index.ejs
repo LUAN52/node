@@ -20,8 +20,17 @@
                     </div>
                     <div class="card-text mb-2">
                         <%=item.discription%>
+
+                        <a  class = " btn btn-primary" href="/articles/<%=item.slug%>"> ler arquivo completo</a>
+                        <a  class = " btn btn-primary" href="/articles/edit/<%=item.id%>"> atualizar arquivo</a>
+
+                        
+                        <form  class="d-inline" method="POST" action="/articles/<%=item.slug%>"  >
+                           <button class="btn btn-danger  type="submit">apagar</button>
+                        </form>
                     </div>
                 </div>
+                
                
             </div>
         <%})%>
